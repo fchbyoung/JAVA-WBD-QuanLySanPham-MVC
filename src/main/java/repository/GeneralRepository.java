@@ -12,7 +12,7 @@ public interface GeneralRepository<T> {
 
     T deleteProduct(int index);
 
-    boolean searchProduct(String productName);
+    T searchProduct(String productName);
 
     void sortProductByPrice();
 

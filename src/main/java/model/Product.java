@@ -1,8 +1,9 @@
 package model;
 
+import java.util.Comparator;
 import java.util.Scanner;
 
-public class Product {
+public class Product implements Comparable<Product> {
 
     private int productId;
     private String productName;
@@ -51,5 +52,17 @@ public class Product {
         this.description = description;
     }
 
+    @Override
+    public String toString() {
+        return "ProductID: " + this.getProductId() + ", ProductName: " + this.getProductName() + ", Price: " + this.getPrice() + ", Descriptions: " +this.getDescription();
+    }
 
+
+    @Override
+    public int compareTo(Product product) {
+        if(this.price > product.price) {
+            return 1;
+        }
+        return -1;
+    }
 }

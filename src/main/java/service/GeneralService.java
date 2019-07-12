@@ -9,11 +9,11 @@ public interface GeneralService<T>{
 
     void addProduct(T product);
 
-    Product editProduct(int id, Product product);
+    T editProduct(int id, Product product);
 
-    Product deleteProduct(int index);
+    T deleteProduct(int index);
 
-    boolean searchProduct(String productName);
+    T searchProduct(String productName);
 
     void sortProductByPrice();
 }

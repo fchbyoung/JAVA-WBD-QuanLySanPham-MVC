@@ -28,12 +28,12 @@ public class ProductService implements GeneralService<Product> {
 
 
     @Override
-    public boolean searchProduct(String productName) {
-        return false;
+    public Product searchProduct(String productName) {
+        return productRepository.searchProduct(productName);
     }
 
     @Override
     public void sortProductByPrice() {
-
+        productRepository.sortProductByPrice();
     }
 }

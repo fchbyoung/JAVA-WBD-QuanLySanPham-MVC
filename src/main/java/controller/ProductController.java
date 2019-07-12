@@ -22,12 +22,12 @@ public class ProductController {
         return productService.deleteProduct(index);
     }
 
-    public boolean searchProduct(String productName) {
-        return false;
+    public Product searchProduct(String productName) {
+        return productService.searchProduct(productName);
     }
 
     public void sortProductByPrice() {
-
+        productService.sortProductByPrice();
     }
 
 }

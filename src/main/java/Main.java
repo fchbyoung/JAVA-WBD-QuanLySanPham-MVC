@@ -19,7 +19,7 @@ public class Main {
                 }
 
                 case 2: {
-                    System.out.println("-----Add New Product-----");
+                    System.out.println("-----Add New Product-----");scanner.skip("/\\n/");
                     Product product = inputProduct(scanner);
                     productController.addProduct(product);
                     break;
@@ -43,10 +43,16 @@ public class Main {
                 }
 
                 case 5: {
+                    System.out.println("-----Search Product-----");
+                    System.out.println("Input Name's Product: ");
+                    String productName = scanner.next();
+                    Product product  = productController.searchProduct(productName);
+                    System.out.println(product);
                     break;
                 }
 
                 case 6: {
+                    productController.sortProductByPrice();
                     break;
                 }
             }
